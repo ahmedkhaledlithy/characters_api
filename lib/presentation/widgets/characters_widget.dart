@@ -1,4 +1,3 @@
-import 'package:characters_api/constants/colors.dart';
 import 'package:characters_api/constants/strings.dart';
 import 'package:characters_api/data/models/character.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +43,7 @@ class CharactersItems extends StatelessWidget {
                                 placeholder: "assets/images/loading.gif",
                                 image: characters[index].img!,
                                 width: double.infinity,
-                                height: 230,
+                                height: 200,
                                 fit: BoxFit.cover,
                               )
                             : Image.asset("assets/images/thinking.png"),

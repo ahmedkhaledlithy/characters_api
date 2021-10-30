@@ -1,4 +1,3 @@
-import 'package:characters_api/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class SearchBar extends StatelessWidget {

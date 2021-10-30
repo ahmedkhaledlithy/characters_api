@@ -42,8 +42,8 @@ class _HomeScreenState extends State<HomeScreen> {
     return OfflineBuilder(
       connectivityBuilder: (BuildContext context, ConnectivityResult connectivity, Widget child) {
           final bool connected = connectivity != ConnectivityResult.none;
-          if( connected){
-            return child;
+          if(connected){
+           return child;
           }else{
             return const OfflineWidget();
           }
