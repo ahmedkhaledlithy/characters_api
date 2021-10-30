@@ -1,7 +1,7 @@
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 
 class ThemeCubit extends HydratedCubit<bool> {
-  ThemeCubit() : super(true);
+  ThemeCubit() : super(false);
 
 
   void changeTheme({required bool value}) {
