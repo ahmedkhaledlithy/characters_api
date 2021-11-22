@@ -1,6 +1,7 @@
 import 'package:characters_api/constants/strings.dart';
 import 'package:characters_api/data/models/character.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class CharactersItems extends StatelessWidget {
   final List<Character> characters;
@@ -9,12 +10,14 @@ class CharactersItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Orientation currentOrientation = MediaQuery.of(context).orientation;
+
     return characters.isNotEmpty
         ? GridView.builder(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               mainAxisSpacing: 10,
-              childAspectRatio: 2 / 2.8,
+              childAspectRatio:currentOrientation==Orientation.portrait? 2 / 2.8 : 2 / 1.5 ,
               crossAxisSpacing: 8,
             ),
             shrinkWrap: true,
@@ -34,8 +37,8 @@ class CharactersItems extends StatelessWidget {
                   },
                   child: Hero(
                     tag: characters[index].charId!,
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
+                    child: Wrap(
+                        alignment: WrapAlignment.center,
                       children: [
                         characters[index].img != null ||
                                 characters[index].img!.isNotEmpty
@@ -47,14 +50,13 @@ class CharactersItems extends StatelessWidget {
                                 fit: BoxFit.cover,
                               )
                             : Image.asset("assets/images/thinking.png"),
-                        const SizedBox(height: 6),
                         Text(
                           characters[index].name!,
                           textAlign: TextAlign.center,
                           maxLines: 1,
                           style: Theme.of(context).textTheme.bodyText1,
                         ),
-                        const SizedBox(height: 6),
+
                       ],
                     ),
                   ),

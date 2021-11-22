@@ -3,7 +3,7 @@ import 'package:characters_api/business_logic/theme/theme_cubit.dart';
 import 'package:characters_api/constants/colors.dart';
 import 'package:characters_api/data/models/character.dart';
 import 'package:characters_api/presentation/widgets/characters_widget.dart';
-import 'package:characters_api/presentation/widgets/no_internet.dart';
+import 'package:characters_api/shared/no_internet.dart';
 import 'package:characters_api/presentation/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

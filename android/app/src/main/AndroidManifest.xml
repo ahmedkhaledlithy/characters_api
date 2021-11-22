@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lithy.characters_api">
    <application
-        android:label="characters_api"
+        android:label="BreakingBad Info"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
